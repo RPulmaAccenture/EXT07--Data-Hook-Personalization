@@ -1,0 +1,22 @@
+Command to Execute the package of collection hook and FND for personalization. 
+
+
+1. Command to compile the package. 
+
+Move the MSC_CL_CLEANSE_PKG.pkb to /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/admin/sql and execute the command below.
+
+
+@/u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/admin/sql/MSC_CL_CLEANSE_PKG.pkb
+
+
+
+2. Command to upload the LDT file. 
+NOTE: Please make sure to update the password.
+
+
+Move the XXNBTY_EXT07_FM.ldt to /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/admin/import and execute the command below.
+
+
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/affrmcus.lct XXNBTY_EXT07_FM.ldt CUSTOM_MODE=FORCE
+
